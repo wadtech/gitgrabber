@@ -1,0 +1,5 @@
+{
+  "interval": 60,
+  "github_personal_token": "SECRET",
+  "backup_directory": "/tmp/backups"
+}
