@@ -4,17 +4,21 @@ module GitGrabber
   class Config
     attr_accessor :interval, :github_personal_token, :backup_directory
 
-    def initialize(path)
-      config = JSON.parse(File.read path)
+    def initialize(conf)
+      missing = []
+      config = JSON.parse(conf)
+
       %w{ interval github_personal_token backup_directory }.each do |required|
         if config[required].nil?
-          raise "missing required config option #{required}"
+          missing << required
         end
       end
 
-      self.interval              = config["interval"]
-      self.github_personal_token = config["github_personal_token"]
-      self.backup_directory      = config["backup_directory"]
+      raise "missing required options #{missing.join(', ')}" unless missing.empty?
+
+      @interval              = config["interval"]
+      @github_personal_token = config["github_personal_token"]
+      @backup_directory      = config["backup_directory"]
     end
   end
 end

@@ -6,12 +6,12 @@ require 'git_grabber/puller'
 module GitGrabber
   class Application
     def config(path)
-      @config = git_grabber::Config.new path
-      @api     = git_grabber::Api.new @config.github_personal_token
+      @config = GitGrabber::Config.new File.read path
+      @api    = GitGrabber::Api.new @config.github_personal_token
     end
 
     def go
-      puller = git_grabber::Puller.new @config.backup_directory
+      puller = GitGrabber::Puller.new @config.backup_directory
 
       while true
         repos = @api.fetch_all

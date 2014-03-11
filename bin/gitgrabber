@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'git_grabber'
 
-g = git_grabber::Application.new
+g = GitGrabber::Application.new
 
 g.config './config.json'
 g.go

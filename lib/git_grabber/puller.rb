@@ -16,13 +16,13 @@ module GitGrabber
     def fetch_repository(addr, path)
       puts "fetch #{addr} to #{File.join @base_dir, path}"
       Dir.chdir(File.join @base_dir, path) do
-        %x{ git fetch --all }
+        `git fetch --all`
       end
     end
 
     def clone_repository(addr, path)
       puts "clone #{addr} to #{File.join @base_dir, path}"
-      %x{ git clone --bare #{addr} #{File.join @base_dir, path} }
+      `git clone --bare #{addr} #{File.join @base_dir, path}`
     end
   end
 end
