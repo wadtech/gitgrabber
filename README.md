@@ -7,10 +7,10 @@ A simple github backup tool, for peace of mind.
 Add settings to config.json:
 
 1. Generate a github personal token
-2. Set an interval (min 60 seconds. Depending on your usage, once or twice a day is probably enough, ymmv.)
+2. Set an interval (min 60 seconds. Depending on your usage once or twice a day is probably enough, your mileage may vary.)
 3. Set a backup directory where projects should be cloned/fetched.
 
-run the application `git-grabber` from your command line (you can fork it to the background in bash with `git-grabber &`) the application will log its progress so redirect to a file or `/dev/null` if you're not interested.
+Run the application `gitgrabber` from your command line (you can fork it to the background in bash with `gitgrabber &`) the application will log its progress so redirect to a file or `/dev/null` if you're not interested.
 
 For issues, please use the issue tracker on the repository.
 

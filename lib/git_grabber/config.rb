@@ -16,7 +16,7 @@ module GitGrabber
 
       raise "missing required options #{missing.join(', ')}" unless missing.empty?
 
-      @interval              = config["interval"]
+      @interval              = [config["interval"], 60].max # force 60 seconds min interval
       @github_personal_token = config["github_personal_token"]
       @backup_directory      = config["backup_directory"]
     end
