@@ -1,6 +1,6 @@
 require 'json'
 
-module Grabber
+module GitGrabber
   class Config
     attr_accessor :interval, :github_personal_token, :backup_directory
 

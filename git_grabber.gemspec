@@ -1,18 +1,18 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'grabber/version'
+require 'git_grabber/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "grabber"
-  spec.version       = Grabber::VERSION
+  spec.name          = "git-grabber"
+  spec.version       = GitGrabber::VERSION
   spec.authors       = ["Peter Mellett"]
   spec.email         = ["pjm@petermellett.co.uk"]
   spec.summary       = "Simple application to back up github repositories"
-  spec.homepage      = "http://www.github.com/wadtech/grabber"
+  spec.homepage      = "http://www.github.com/wadtech/gitgrabber"
   spec.license       = "MIT"
 
-  spec.files         = %w(LICENSE.txt README.md Rakefile grabber.gemspec)
+  spec.files         = %w(LICENSE.txt README.md Rakefile git_grabber.gemspec)
   spec.files        += Dir.glob("lib/**/*.rb")
   spec.files        += Dir.glob("bin/**/*")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

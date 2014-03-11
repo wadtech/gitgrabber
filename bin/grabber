@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-require 'grabber'
-
-g = Grabber::Application.new
-
-g.config './config.json'
-g.go

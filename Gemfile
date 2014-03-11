@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in grabber.gemspec
+# Specify your gem's dependencies in git_grabber.gemspec
 gemspec

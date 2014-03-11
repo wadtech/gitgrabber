@@ -1,4 +1,4 @@
-module Grabber
+module GitGrabber
   class Api
     require 'octokit'
 

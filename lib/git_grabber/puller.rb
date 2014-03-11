@@ -1,4 +1,4 @@
-module Grabber
+module GitGrabber
   class Puller
     def initialize(backup_dir)
       @base_dir = backup_dir
